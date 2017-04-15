@@ -1,0 +1,89 @@
+- const cap = string => {
+-  var r = string.charAt(0).toUpperCase() + string.slice(1);
+-  r = r.split('_').join(' ');
+-  return r;
+- }
+doctype html
+html(lang="en")
+  head
+    link(rel='stylesheet', href= root + '/_static/style.css')
+    title= title + ' - Gekko'
+  body
+    nav
+      .header
+        h1
+          a(href='/') Gekko
+        ul
+          li
+            a(href='/docs') documentation
+          li
+            a(href='/docs/installation/installing_gekko.html#Downloading-Gekko') download
+          li
+            a(href='https://github.com/askmike/gekko', target='_blank') github
+    //- documentation page template
+    if isDoc
+      .content
+        nav.menu
+          each folder in nav
+            h2= cap(folder.name)
+            ul
+              each page in folder.content
+                li
+                  a(href=root + '/docs/' + folder.name + '/' + page + '.html')= cap(page)
+        main!= html
+      footer
+        p
+          em Copyright &copy; #{new Date().getFullYear()} 
+            a(href='https://github.com/askmike/gekko/graphs/contributors', target='_blank') Gekko Contributors
+    //- homepage
+    else
+      .hero
+        .box
+          h1 From market data to usable insights
+          h2 Gekko is an open source platform for automating trading strategies for bitcoin markets.
+          .cta
+            a(href='/docs/') Get started!
+      .buttons
+        a(class='github-button', href='https://github.com/askmike/gekko', data-style="mega", data-count-href="/askmike/gekko/stargazers", data-count-api="/repos/askmike/gekko#stargazers_count", data-count-aria-label="# stargazers on GitHub", aria-label="Star askmike/gekko on GitHub", target='_blank') Star
+        |  
+        a(target='_blank', href='https://www.npmjs.com/package/gekko')
+          img(src='https://img.shields.io/npm/dm/gekko.svg', width='134')
+        script(async, defer, src='https://buttons.github.io/buttons.js')
+      .blocks
+        .block
+          h2 Open Source
+          p Gekko is free and 100% open source, you download and run the software on your own machine. Gekko only talks to the exchanges (if you want it too). We don't know anyhing about your strategies, usage, portfolio size or anything else (unless you tell us).
+        .block
+          h2 Exchange support
+          p Gekko supports #{amountOfExchanges} different exchanges (including Bitfinex, Bitstamp and Poloniex). Just tell Gekko which exchange you want to interact with and Gekko talks directly to the exchange.
+        .block
+          h2 Strategy Platform
+          p Gekko makes it possible to create your own trading strategies using TA indicators. Once you created it you can use Gekko to backtest your strategy over historical market data or run against the live market (using either a paper trader or real trader - making it a trading bot).
+        .block
+          h2 Plugin system
+          p Using plugins Gekko is able to update you wherever you are! Plugins are available for IRC, telegram, email and a lot of other platforms. Without effor you are able to add your own plugins to Gekko.
+        .block
+          h2 Web interface
+          p Gekko comes with a webinterface (written from scratch) that let's you monitor your local data, strategies and can run backtests and visualize the results.
+        .block
+          h2 Runs anywhere
+          p Gekko runs flawlessly on all major operating systems (Windows, Linux, macOS), you can run it in the cloud or on your raspberry PI without any problems!
+      .contact
+        h2 Contact
+        p If you have any issue with Gekko please post 
+          a(href='https://github.com/askmike/gekko/issues/', target='_blank') an issue on Github
+          | . For any other further questions please contact Mike at 
+          a(href='mailto:gekko@mvr.me', target='_blank') gekko@mvr.me
+          | .
+      footer
+        p
+          em Copyright &copy; #{new Date().getFullYear()} 
+            a(href='https://github.com/askmike/gekko/graphs/contributors', target='_blank') Gekko Contributors
+    script.
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-47055020-5', 'auto');
+      ga('send', 'pageview');
