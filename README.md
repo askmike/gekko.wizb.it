@@ -6,7 +6,7 @@ NOTE: all documentation is actually stored in markdown format [inside the gekko 
 
 # USAGE
 
-Make sure youb cloned the gekko repo as a sibling to this folder, eg.:
+Make sure you cloned the gekko repo as a sibling to this folder, eg.:
 
     /projects
       /gekko
