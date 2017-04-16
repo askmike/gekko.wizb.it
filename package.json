@@ -1,0 +1,29 @@
+{
+  "name": "gekko.wizb.it",
+  "version": "1.0.0",
+  "description": "website generator for gekko.wizb.it",
+  "main": "build.js",
+  "dependencies": {
+    "delete": "^0.3.2",
+    "lodash": "^4.17.4",
+    "marked": "^0.3.6",
+    "ncp": "^2.0.0",
+    "pug": "^2.0.0-beta11",
+    "rimraf": "^2.6.1",
+    "walk-sync": "^0.3.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/askmike/gekko.wizb.it.git"
+  },
+  "author": "Mike van Rossum",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/askmike/gekko.wizb.it/issues"
+  },
+  "homepage": "https://github.com/askmike/gekko.wizb.it#readme"
+}
