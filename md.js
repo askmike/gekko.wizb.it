@@ -16,6 +16,7 @@ renderer.heading = function (text, level) {
 
 
 // rewrite .md to .html
+// add target_blank if external
 renderer.link = function(href, title, text) {
   if (this.options.sanitize) {
     try {
@@ -36,6 +37,9 @@ renderer.link = function(href, title, text) {
   var out = '<a href="' + href + '"';
   if (title) {
     out += ' title="' + title + '"';
+  }
+  if(_.startsWith(href, 'http')) {
+    out += ' target="_blank"';
   }
   out += '>' + text + '</a>';
   return out;
