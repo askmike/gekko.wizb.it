@@ -2,7 +2,7 @@ const walkSync = require('walk-sync');
 const _ = require('lodash');
 const fs = require('fs');
 
-const PATH = '../../docs/';
+const PATH = '../gekko/docs/';
 
 // build structure
 const fileNames = walkSync(PATH).filter(f => _.endsWith(f, '.md'));

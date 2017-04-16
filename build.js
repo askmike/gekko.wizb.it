@@ -5,7 +5,7 @@ const pug = require('pug');
 const fs = require('fs');
 const del = require('delete');
 const ncp = require('ncp');
-const package = require('../../package');
+const package = require('../gekko/package');
 
 const CONFIG = {
   dirs: {
@@ -69,7 +69,7 @@ _.each(content.files, f => {
 
 // gekko supports as many exchanges, as there are `.js` files in the exchange directory
 const walkSync = require('walk-sync');
-const amountOfExchanges = walkSync('../../exchanges/').filter(f => _.endsWith(f, '.js')).length;
+const amountOfExchanges = walkSync('../gekko/exchanges/').filter(f => _.endsWith(f, '.js')).length;
 
 // prepare all jade vars
 let vars = {
