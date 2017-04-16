@@ -18,7 +18,7 @@ html(lang="en")
           li
             a(href='/docs') documentation
           li
-            a(href='/docs/installation/installing_gekko.html#Downloading-Gekko') download
+            a(href='/docs/installation/installing_gekko.html') download
           li
             a(href='https://github.com/askmike/gekko', target='_blank') github
     //- documentation page template
@@ -30,12 +30,12 @@ html(lang="en")
             ul
               each page in folder.content
                 li
-                  a(href=root + '/docs/' + folder.name + '/' + page + '.html')= cap(page)
+                  a(href=root + '/docs/' + folder.name + '/' + page.toLowerCase() + '.html')= cap(page)
         main!= html
       footer
         p
           em Copyright &copy; #{new Date().getFullYear()} 
-            a(href='https://github.com/askmike/gekko/graphs/contributors', target='_blank') Gekko Contributors
+            a(href='https://github.com/askmike/gekko/graphs/contributors', target='_blank') Gekko Developers
     //- homepage
     else
       .hero
@@ -79,7 +79,7 @@ html(lang="en")
       footer
         p
           em Copyright &copy; #{new Date().getFullYear()} 
-            a(href='https://github.com/askmike/gekko/graphs/contributors', target='_blank') Gekko Contributors
+            a(href='https://github.com/askmike/gekko/graphs/contributors', target='_blank') Gekko Developers
     script.
       console.log('source code found at https://github.com/askmike/gekko.wizb.it/');
 
