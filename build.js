@@ -85,3 +85,4 @@ console.log('wrote', 'site/index.html');
 
 
 ncp('static', 'site/_static');
+ncp('favicons', 'site/');
