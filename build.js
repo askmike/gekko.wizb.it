@@ -74,7 +74,6 @@ const amountOfExchanges = walkSync('../gekko/exchanges/').filter(f => _.endsWith
 // prepare all jade vars
 let vars = {
   isDoc: false,
-  title: 'Gekko - open source bitcoin trading bot',
   amountOfExchanges: amountOfExchanges
 
 };

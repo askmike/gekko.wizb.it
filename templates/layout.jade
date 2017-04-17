@@ -8,7 +8,10 @@ doctype html
 html(lang="en")
   head
     link(rel='stylesheet', href= root + '/_static/style.css')
-    title= title + ' - Gekko'
+    if isDoc
+      title= title + ' - Gekko'
+    else
+      title Gekko - Open source bitcoin trade bot platform
   body
     nav
       .header
