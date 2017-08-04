@@ -15,6 +15,11 @@ Make sure you cloned the gekko repo as a sibling to this folder, eg.:
 Go into this repo and run node build:
 
     cd gekko.wizb.it
+    npm install 
     node build
 
 And `/site` now contains the full website.
+
+# Running the site locally
+
+At the top folder `gekko.wizb.it`, run command `./node_modules/http-server/bin/http-server site`
