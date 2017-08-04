@@ -12,6 +12,7 @@ const CONFIG = {
     order: [
       'introduction',
       'installation',
+      'configuration',
       'features',
       'strategies',
       'commandline',

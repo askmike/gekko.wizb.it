@@ -12,6 +12,8 @@ Make sure you cloned the gekko repo as a sibling to this folder, eg.:
       /gekko
       /gekko.wizb.it
 
+If you are adding a new folder (new section on the left hand side menu), change `build.js` to include your section into `dirs` variable
+
 Go into this repo and run node build:
 
     cd gekko.wizb.it
