@@ -11,7 +11,8 @@ const CONFIG = {
   order: {
     introduction: [
       'about_gekko',
-      'supported_exchanges'
+      'supported_exchanges',
+      'scope'
     ],
     installation: [
       'installing_gekko',
