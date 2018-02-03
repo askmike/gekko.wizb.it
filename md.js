@@ -4,8 +4,13 @@ var renderer = new marked.Renderer();
  
 // add anchors
 renderer.heading = function (text, level) {
-  var escapedText = text.replace(/[^\w]+/g, '-');
+  var escapedText = text
+    .replace(/[^\w]+/g, '-')
+    .split('-code-').join('-');
  
+    if(escapedText[0] === "-")
+      escapedText = escapedText.substr(1);
+
   return '<h' + level + '>' + text + ' <a name="' +
     escapedText +
      '" class="anchor" href="#' +
@@ -16,7 +21,7 @@ renderer.heading = function (text, level) {
 
 
 // rewrite .md to .html
-// add target_blank if external
+// add target=_blank if external
 renderer.link = function(href, title, text) {
   if (this.options.sanitize) {
     try {
