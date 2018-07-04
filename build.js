@@ -25,10 +25,15 @@ const CONFIG = {
       'importing'
     ],
     strategies: [
+      'introduction',
       'creating_a_strategy',
-      'example_strategies',
       'gekko_indicators',
       'talib_indicators'
+    ],
+    gekko_broker: [
+      'introduction',
+      'sticky_order',
+      'wrapper_api'
     ],
     commandline: [
       'about_the_commandline',
@@ -44,6 +49,8 @@ const CONFIG = {
     ],
     internals: [
       'architecture',
+      'events',
+      'server_api',
       'gekko_ui',
       'budfox',
     ]
