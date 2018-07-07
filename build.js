@@ -16,9 +16,10 @@ const CONFIG = {
     ],
     installation: [
       'installing_gekko',
-      'installing_gekko_on_a_server',
       'installing_gekko_on_windows',
-      'Installing gekko_using_docker'
+      'Installing gekko_using_docker',
+      'configuring_gekko_on_a_server',
+      'updating_gekko'
     ],
     features: [
       'backtesting',
