@@ -31,17 +31,17 @@ const CONFIG = {
       'gekko_indicators',
       'talib_indicators'
     ],
-    gekko_broker: [
-      'introduction',
-      'sticky_order',
-      'wrapper_api'
-    ],
     commandline: [
       'about_the_commandline',
       'plugins',
       'Importing',
       'backtesting',
       'tradebot'
+    ],
+    'gekko-broker': [
+      'introduction',
+      'sticky_order',
+      'wrapper_api'
     ],
     extending: [
       'add_an_exchange',
