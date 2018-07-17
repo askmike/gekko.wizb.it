@@ -205,6 +205,10 @@ table tr:nth-child(2n) {
   font-size: 1.3em;
 }
 
+.cta {
+  display: flex;
+}
+
 .cta a {
   display: block;
   margin: 37px auto 0 auto;

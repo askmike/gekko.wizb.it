@@ -8,9 +8,26 @@ const ncp = require('ncp');
 const package = require('../gekko/package');
 
 const CONFIG = {
-  dirs: {
-    order: [
+  order: {
+    introduction: [
+      'about_gekko',
+      'supported_exchanges',
+      'scope'
+    ],
+    installation: [
+      'installing_gekko',
+      'installing_gekko_on_windows',
+      'Installing gekko_using_docker',
+      'configuring_gekko_on_a_server',
+      'updating_gekko'
+    ],
+    features: [
+      'backtesting',
+      'importing'
+    ],
+    strategies: [
       'introduction',
+<<<<<<< HEAD
       'installation',
       'configuration',
       'features',
@@ -18,6 +35,35 @@ const CONFIG = {
       'commandline',
       'extending',
       'internals'
+=======
+      'creating_a_strategy',
+      'gekko_indicators',
+      'talib_indicators'
+    ],
+    commandline: [
+      'about_the_commandline',
+      'plugins',
+      'Importing',
+      'backtesting',
+      'tradebot'
+    ],
+    'gekko-broker': [
+      'introduction',
+      'sticky_order',
+      'wrapper_api'
+    ],
+    extending: [
+      'add_an_exchange',
+      'add_a_plugin',
+      'other_software'
+    ],
+    internals: [
+      'architecture',
+      'events',
+      'server_api',
+      'gekko_ui',
+      'budfox',
+>>>>>>> a8a2335dc3aaf3a2e6af64a2c6ec10b27cffc90e
     ]
   }
 }
@@ -27,13 +73,28 @@ const locals = {
   version: package.version
 }
 
-const nav = _.map(CONFIG.dirs.order, f => {
-  if(!content.tree[f])
+const getIndex = subtree => name => {
+  const index = CONFIG.order[subtree].indexOf(name);
+
+  if(index === -1)
+    return 100;
+
+  return index;
+}
+
+const nav = _.map(_.keys(CONFIG.order), d => {
+
+  // skip subtrees not specified above
+  if(!content.tree[d])
     return;
 
+  const get = getIndex(d);
+
+  const subnab = content.tree[d].sort((a, b) => get(a) - get(b))
+
   return {
-    name: f,
-    content: content.tree[f]
+    name: d,
+    content: content.tree[d]
   }
 }).filter(_.identity);
 
