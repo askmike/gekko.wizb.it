@@ -27,15 +27,6 @@ const CONFIG = {
     ],
     strategies: [
       'introduction',
-<<<<<<< HEAD
-      'installation',
-      'configuration',
-      'features',
-      'strategies',
-      'commandline',
-      'extending',
-      'internals'
-=======
       'creating_a_strategy',
       'gekko_indicators',
       'talib_indicators'
@@ -63,7 +54,6 @@ const CONFIG = {
       'server_api',
       'gekko_ui',
       'budfox',
->>>>>>> a8a2335dc3aaf3a2e6af64a2c6ec10b27cffc90e
     ]
   }
 }
