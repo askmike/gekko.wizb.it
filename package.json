@@ -5,6 +5,7 @@
   "main": "build.js",
   "dependencies": {
     "delete": "^0.3.2",
+    "http-server": "^0.10.0",
     "lodash": "^4.17.4",
     "marked": "^0.3.6",
     "ncp": "^2.0.0",
