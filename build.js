@@ -121,7 +121,7 @@ _.each(content.files, f => {
 
 // gekko supports as many exchanges, as there are `.js` files in the exchange directory
 const walkSync = require('walk-sync');
-const amountOfExchanges = walkSync('../gekko/exchanges/').filter(f => _.endsWith(f, '.js')).length;
+const amountOfExchanges = walkSync('../gekko/exchange/wrappers').filter(f => _.endsWith(f, '.js')).length;
 
 // prepare all jade vars
 let vars = {
